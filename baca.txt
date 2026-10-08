@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "push tugas"
+git branch -M main
+git remote add origin https://github.com/davidtandi/UTS-Framework-Programing.git
+git push -u origin main
