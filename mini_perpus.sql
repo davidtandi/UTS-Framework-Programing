@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Okt 2026 pada 17.40
+-- Waktu pembuatan: 09 Okt 2026 pada 12.11
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -43,7 +43,9 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `category_id`, `title`, `author`, `published_year`, `stock`, `created_at`, `updated_at`) VALUES
-(1, 2, 'in my Live', 'Richi', 2027, 23, '2026-10-08 07:13:12', '2026-10-08 07:14:53');
+(1, 2, 'a day in my Live', 'Richi', 2027, 23, '2026-10-08 07:13:12', '2026-10-08 22:17:10'),
+(2, 2, 'midnight at malioboro', 'okin', 2020, 19, '2026-10-08 22:17:59', '2026-10-08 22:17:59'),
+(3, 3, 'One Piece vol 133', 'zzz', 2002, 25, '2026-10-08 22:19:16', '2026-10-08 22:19:16');
 
 -- --------------------------------------------------------
 
@@ -88,7 +90,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(2, 'Novel', 'Cerita Lucu', '2026-10-08 07:14:30', '2026-10-08 07:14:30');
+(2, 'Novel', 'Cerita Lucu', '2026-10-08 07:14:30', '2026-10-08 07:14:30'),
+(3, 'komik', NULL, '2026-10-08 22:18:23', '2026-10-08 22:18:23');
 
 -- --------------------------------------------------------
 
@@ -196,7 +199,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('OTfTN8NVjbnmKFdPY7VVU2PgXciyAOUZ8yHzspPR', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicW80bUhlalJEZVJGQ2M3SmZjelZkWXIzb3doSzRqOEpQdVRlbktTRSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29rcyI7czo1OiJyb3V0ZSI7czoxMToiYm9va3MuaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1791473718);
+('7py9MBzviSw07dxaq39drDUcF5RMy49fdGwMfjRr', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.141.0 Chrome/150.0.7871.250 Electron/43.7.7 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicEpHbncxTGtjV05oUTk2cFlzZEdMWGNIbVZxbElpQ21UNDVXQjFxMCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jYXRlZ29yaWVzIjtzOjU6InJvdXRlIjtzOjE2OiJjYXRlZ29yaWVzLmluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1791526388),
+('q97LSnWl5oM0F243VBwWQTnvwBuXtAm3IZzaevKK', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibk1vc09aNDRvcENDUWhnWURjN2JyUVRxY0p6WXZ3TTViUGJHSnE3SiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29rcyI7czo1OiJyb3V0ZSI7czoxMToiYm9va3MuaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1791526757);
 
 -- --------------------------------------------------------
 
@@ -302,13 +306,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
